@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Displaced Persons</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="loadingDataInitially">
+		<i class="fa fa-spinner"></i>
+		<p>Loading...</p>
+	</div>
+	<div class="container">
+
+		<!-- force layout div -->
+		<div id="forceDiv" class="content">
+			<h2>Destination and Origin Countries<i class="fa fa-ellipsis-v"></i></h2>
+			<div class="loadingMessage">
+				<i class="fa fa-spinner"></i>
+				<p>Loading...</p>
+			</div>
+			<div id="nothingHappeningMessage3">
+				<i class="fa fa-hand-o-right"></i>
+				<p>Select Years</p>
+			</div>
+			<div id="nothingHappeningMessage2">
+				<i class="fa fa-hand-o-right"></i>
+				<p>Select Counrties of Origin</p>
+			</div>
+			<div id="nothingHappeningMessage1">
+				<i class="fa fa-hand-o-right"></i>
+				<p>Select Counrties of Origin and Years</p>
+			</div>
+		</div>
+		<!-- /force layout div -->
+
+		<!-- controlsDiv -->
+		<div class="controlsDiv">
+
+			<!-- country select div -->
+			<div class="content countrySelectDiv">
+				<h3>Select Origin Countries</h3>
+				<ul>
+					<li class="selectAll"><i class="fa fa-circle-o"></i> Select/Deselect All</li>
+				</ul>
+				<div class="scrollList">
+					<ul id="countryList"></ul>
+				</div>
+			</div>
+			<!-- /country select div -->
+
+			<!-- year select div -->
+			<div class="content yearSelectDiv">
+				<h3>Select Years</h3>
+				<ul>
+					<li class="selectAll"><i class="fa fa-circle-o"></i> Select/Deselect All</li>
+				</ul>
+				<div class="scrollList">
+					<ul id="yearList"></ul>
+				</div>
+			</div>
+			<!-- /year select div -->
+
+			<!-- control buttons -->
+			<div class="content buttonsDiv">
+				<button class="showSavedSearches">Saved Searches <i class="fa fa-caret-down"></i></button>
+				<button class="saveSearch">Save Search</button>
+				<button class="updateGraphs">Update</button>
+			</div>
+			<!-- /control buttons -->
+
+		</div>
+		<!-- controlsDiv -->
+
+		<!-- histogram layout div -->
+		<div class="content histogramLayoutDiv">
+			<h2>Displaced Persons by Origin for Selected Years<i class="fa fa-ellipsis-v"></i></h2>
+			<div class="loadingMessage">
+				<i class="fa fa-spinner"></i>
+				<p>Loading...</p>
+			</div>
+		</div>
+		<!-- /histogram layout div -->
+
+		<!-- footer -->
+		<footer class="content">
+			<div class="nothing"></div>
+			<h1>Refugee Populations</h1>
+			<a href="http://popstats.unhcr.org/en/persons_of_concern.csv">Data sourced from UNHCR</a>
+			<div>
+				<p>Alex Sawsienowicz</p>
+				<a href="www.alexsaw.com">www.alexsaw.com</a>
+			</div>
+		</footer>
+		<!-- /footer -->
+
+	</div> <!-- /.container -->
+
+
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="js/main.js"></script>
+
+</html>

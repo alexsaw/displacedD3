@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 200; }
+
+body {
+  background-color: #F4F6F9;
+  color: #454545;
+  font-family: "Helvetica Neue"; }
+
+.container {
+  background-color: #F4F6F9;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  margin: 0 auto;
+  width: 1000px;
+  padding-bottom: 10px; }
+
+.content {
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  padding: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  vertical-align: top; }
+  .content h2 i {
+    float: right;
+    color: #D8DDE6;
+    font-size: 16px;
+    cursor: pointer; }
+    .content h2 i:hover {
+      color: black; }
+  .content:hover {
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.46);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.46); }
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg); } }
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+#forceDiv {
+  width: 530px;
+  height: 430px; }
+  #forceDiv svg {
+    margin-top: 5px; }
+    #forceDiv svg.fullScreen {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: white; }
+  #forceDiv #nothingHappeningMessage1, #forceDiv #nothingHappeningMessage2, #forceDiv #nothingHappeningMessage3 {
+    margin-top: 160px;
+    color: #D8DDE6; }
+    #forceDiv #nothingHappeningMessage1 i, #forceDiv #nothingHappeningMessage2 i, #forceDiv #nothingHappeningMessage3 i {
+      display: block;
+      text-align: center;
+      font-size: 30px; }
+    #forceDiv #nothingHappeningMessage1 p, #forceDiv #nothingHappeningMessage2 p, #forceDiv #nothingHappeningMessage3 p {
+      text-align: center; }
+  #forceDiv .loadingMessage {
+    margin-top: 10px;
+    height: 230px;
+    color: white;
+    width: 100%;
+    background-color: #D8DDE6;
+    padding-top: 160px; }
+    #forceDiv .loadingMessage i {
+      display: block;
+      text-align: center;
+      font-size: 30px;
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 800ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 800ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 800ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+      animation-name: spin;
+      animation-duration: 800ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+    #forceDiv .loadingMessage p {
+      text-align: center;
+      padding-left: 14px;
+      margin-top: 4px; }
+
+.loadingDataInitially {
+  background-color: #D8DDE6;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  color: white;
+  display: block;
+  width: 100%; }
+  .loadingDataInitially i {
+    position: relative;
+    top: 40%;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 800ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 800ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .loadingDataInitially p {
+    position: relative;
+    top: 40%;
+    text-align: center;
+    padding-left: 14px;
+    margin-top: 4px; }
+
+.controlsDiv {
+  display: inline-block;
+  vertical-align: top;
+  width: 420px; }
+
+.buttonsDiv {
+  width: 375px; }
+  .buttonsDiv button {
+    cursor: pointer;
+    padding: 5px 12px;
+    border: none;
+    outline: none;
+    font-size: 14px; }
+    .buttonsDiv button.showSavedSearches {
+      width: 190px;
+      text-align: left;
+      background: white;
+      border: 1px solid lightgrey; }
+      .buttonsDiv button.showSavedSearches i {
+        float: right; }
+    .buttonsDiv button.updateGraphs {
+      background-color: green;
+      color: white; }
+
+.countrySelectDiv {
+  height: 361px;
+  width: 200px; }
+
+.yearSelectDiv {
+  height: 361px;
+  width: 130px; }
+
+ul {
+  list-style-type: none;
+  font-size: 12px; }
+  ul li {
+    cursor: default;
+    padding: 3px 0px; }
+    ul li:hover {
+      background-color: #F4F6F9; }
+    ul li i {
+      padding: 3px 5px; }
+
+.scrollList {
+  overflow: scroll;
+  height: 314px; }
+
+.histogramLayoutDiv {
+  width: 948px;
+  height: 260px; }
+  .histogramLayoutDiv svg {
+    width: 950px;
+    height: 246px; }
+  .histogramLayoutDiv .loadingMessage {
+    height: 137px;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    background-color: #D8DDE6;
+    padding-top: 85px; }
+    .histogramLayoutDiv .loadingMessage i {
+      display: block;
+      text-align: center;
+      font-size: 30px;
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 800ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 800ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 800ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+      animation-name: spin;
+      animation-duration: 800ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+    .histogramLayoutDiv .loadingMessage p {
+      text-align: center;
+      padding-left: 14px;
+      margin-top: 4px; }
+
+footer {
+  width: 948px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,297 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-weight: 200
+}
+body{
+	background-color: #F4F6F9;
+	color: #454545;
+	font-family: "Helvetica Neue";
+}
+
+.container{
+	background-color: #F4F6F9;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	margin: 0 auto;
+	width: 1000px;
+	padding-bottom: 10px;
+}
+
+.content{
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.16);
+	-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.16);
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.16);
+	background-color: white;
+	padding: 15px;
+	display:inline-block;
+	margin-left:10px;
+	margin-top:10px;
+	vertical-align: top;
+	h2{
+		i{
+			float: right;
+			color: #D8DDE6;
+			font-size: 16px;
+			cursor: pointer;
+			&:hover{
+				color: black;
+			}
+		}
+	}
+	&:hover{
+		-webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.46);
+		-moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.46);
+		box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.46);
+	}
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#forceDiv{
+	width: 530px;
+	height: 430px;
+	
+	svg{
+		margin-top:5px;
+		&.fullScreen{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: white;
+		}
+	}
+
+	#nothingHappeningMessage1, #nothingHappeningMessage2, #nothingHappeningMessage3{
+		margin-top: 160px;
+		color: #D8DDE6;
+		i {
+			display:block;
+			text-align: center;
+			font-size: 30px;
+		}
+		p {
+			text-align: center;
+		}
+	}
+	
+	.loadingMessage{
+		margin-top:10px;
+	    height: 230px;
+	    color: white;
+	    width: 100%;
+	    background-color: #D8DDE6;
+	    padding-top: 160px;
+		i{
+			display:block;
+			text-align: center;
+			font-size: 30px;
+
+			-webkit-animation-name: spin;
+			-webkit-animation-duration: 800ms;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+
+			-moz-animation-name: spin;
+			-moz-animation-duration: 800ms;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+
+			-ms-animation-name: spin;
+			-ms-animation-duration: 800ms;
+			-ms-animation-iteration-count: infinite;
+			-ms-animation-timing-function: linear;
+
+			animation-name: spin;
+			animation-duration: 800ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		p{
+			text-align: center;
+			padding-left: 14px;
+			margin-top: 4px;
+		}
+	}
+}
+
+.loadingDataInitially{
+	background-color: #D8DDE6;
+	height: 100%;
+	position: absolute;
+	z-index: 100;
+	color: white;
+	display:block;
+	width: 100%;
+	i{
+		position: relative;
+		top: 40%;
+		display:block;
+		text-align: center;
+		font-size: 30px;
+
+		-webkit-animation-name: spin;
+		-webkit-animation-duration: 800ms;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+
+		-moz-animation-name: spin;
+		-moz-animation-duration: 800ms;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-timing-function: linear;
+
+		-ms-animation-name: spin;
+		-ms-animation-duration: 800ms;
+		-ms-animation-iteration-count: infinite;
+		-ms-animation-timing-function: linear;
+
+		animation-name: spin;
+		animation-duration: 800ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	p{
+		position: relative;
+		top: 40%;
+		text-align: center;
+		padding-left: 14px;
+		margin-top: 4px;
+	}
+}
+
+.controlsDiv{
+	display:inline-block;
+	vertical-align:top;
+	width: 420px;
+}
+
+.buttonsDiv{
+	width: 375px;
+	button{
+		cursor: pointer;
+		padding: 5px 12px;
+		border: none;
+		outline: none;
+		font-size: 14px;
+		&.showSavedSearches{
+			width: 190px;
+			text-align: left;
+			background: white;
+			border: 1px solid lightgrey;
+			i{
+				float: right;
+			}
+		}
+		&.saveSearch{
+
+
+		}
+		&.updateGraphs{
+			background-color: green;
+			color: white;
+		}
+	}
+}
+.countrySelectDiv{
+	height: 361px;
+	width: 200px;
+}
+
+.yearSelectDiv{
+	height: 361px;
+	width: 130px;
+}
+
+ul {
+	list-style-type: none;
+	font-size: 12px;
+	li{
+		cursor: default;
+		padding: 3px 0px;
+		&:hover{
+			background-color: #F4F6F9;
+		}
+		i{
+			padding: 3px 5px;
+		}
+	}
+}
+
+.scrollList{
+	overflow:scroll;
+	height:314px;
+}
+
+.histogramLayoutDiv{
+	width: 948px;
+	height: 260px;
+
+	svg {
+		width: 950px;
+		height: 246px;
+	}
+
+	.loadingMessage{
+		height: 137px;
+		margin-top: 10px;
+		color: white;
+		width: 100%;
+		background-color: #D8DDE6;
+		padding-top: 85px;
+		i{
+			display:block;
+			text-align: center;
+			font-size: 30px;
+
+			-webkit-animation-name: spin;
+			-webkit-animation-duration: 800ms;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+
+			-moz-animation-name: spin;
+			-moz-animation-duration: 800ms;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+
+			-ms-animation-name: spin;
+			-ms-animation-duration: 800ms;
+			-ms-animation-iteration-count: infinite;
+			-ms-animation-timing-function: linear;
+
+			animation-name: spin;
+			animation-duration: 800ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		p{
+			text-align: center;
+			padding-left: 14px;
+			margin-top: 4px;
+		}
+	}
+}
+
+footer{
+	width: 948px;
+}
